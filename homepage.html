@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/Final-1/homepage.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="activities">
+        <div class="head">
+            <a href="/Final-1/user's info.html" class="profile">
+            <img src="/Final-1/images/user-hexagon.png" class="user">
+            <p class="username" id="nameInput"></p>
+            </a>
+            <img src="/Final-1/images/cog.png" class="setting">
+        </div>
+        <div class="content-wrapper">
+        <div class="UA">
+            <li class="ya">Your Activities</li>
+            <div class="yai">
+                <p class="yai1">Community Cleanup</p>
+                    <p class="activities-title">Position: Central Park</p>
+                    <p class="yai3">Time: Sat, 10:00 AM - 2:00 PM</p>
+                    <p>Introduction: Help clean up the park and plant new trees for our community</p>
+                    <p class="signed">Signed Up</p>
+            </div>
+            <div class="ua1">
+                <p class="activities-title">Book Club Meeting</p>
+                    <p class="ua1p">Position: Community Center</p>
+                    <p>Time: Sun, 3:00 PM - 5:00 PM</p>
+                    <p>Introduction: Discussing "The Great Gatsby" this month</p>
+                    <p class="signed">Signed up</p>
+            </div>
+            <div class="ua2">
+                <p class="activities-title">Volunteer Teaching</p>
+                    <p>Position: Westside School</p>
+                    <p>Time: Every Tue, 4:00 PM - 6:00 PM</p>
+                    <p>Introduction: Helping students with their homework and reading skills</p>
+                    <p class="signed">Signed Up</p>
+            </div>
+            <li class="read-more">Read More</li>
+        </div>
+        <ul class="else">
+            <p class="E-title">Other Activities</p>
+            <div class="ea1">
+                    <li class="activities-title">Beach Cleanup Drive</li>
+                    <p>Position: Ocean Beach</p>
+                    <p>Time: Sat, 9:00 AM - 1:00 PM</p>
+                    <p>Introduction: Join us to clean the beach and protect marine life</p>
+                    <p class="sign">Sign up</p>
+                </div>
+                
+                <div class="ea2">
+                    <li class="acticities-title">Food Bank Volunteer</li>
+                    <p>Position: City Food Bank</p>
+                    <p>Time: Sun, 10:00 AM - 1:00 PM</p>
+                    <p>Introduction: Help pack food for families in need</p>
+                    <p class="sign">Sign up</p>
+                </div>
+                
+                <div class="ea3">
+                    <li class="activities-title">Senior Center Visit</li>
+                    <p>Position: Golden Years Home</p>
+                    <p>Time: Sat, 2:00 PM - 4:00 PM</p>
+                    <p>Introduction: Spend time with seniors, read stories, and chat</p>
+                    <p class="sign">Sign up</p>
+                </div>  
+                <p class="read-more">Read More</p>
+            </ul>
+            </div>  
+        </ul>
+    </div>
+</div>
+        <div class="under">
+            <img src="/Final-1/images/home-alt.png"class="st1" alt="Home">
+            <img src="/Final-1/images/browser-activity.png" class="st2" alt="Activities">
+            <a href="/Final-1/user's info.html">
+            <img src="/Final-1/images/group.png" class="st3" alt="Profile">
+            </a>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userNameElement = document.getElementById('nameInput');
+            const userName = localStorage.getItem('username') || 'Community Member';
+            userNameElement.textContent = userName;
+        });
+    </script>
+    </body>
+</html>
