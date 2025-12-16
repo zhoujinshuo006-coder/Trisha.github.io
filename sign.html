@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Display</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to bottom right,#DDE5B6 0%, #7D8A56 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container{
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgb(90, 90, 90);
+}
+.welcome{
+    flex: 1;
+    background: linear-gradient(to bottom right,#DDE5B6 0%, #7D8A56 100%);
+    color: #6D5000;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.welcome h1{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.welcome p{
+    font-size: 20px;
+    opacity: 0.9;
+}
+.form-side{
+    flex: 1;
+    padding: 40px;
+    background-color: #FCFAF4;
+}
+.form-side h2{
+    color: darkgray;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.input-group{
+    margin-bottom: 20px;
+}
+.input-group label{
+    display: block;
+    margin-bottom: 9px;
+    color: darkgrey;
+    font-weight: 500;
+}
+.input-group input{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #7D8A56;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0,3s;
+}
+.input-group input:focus{
+    outline: none;
+    border-color: #C1B149;
+}
+.error{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+.check-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+.check-group input{
+    width: 18px;
+    height: 18px;
+}
+.check-group label{
+    color: #6D5000;
+}
+.submit-btn{
+    width: 100%;
+    padding: 16px;
+    background-color: #DDE5B6;
+    color: #6D5000;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.submit-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgb(90, 90, 90);
+}
+.success-message{
+    display: none;
+    background: #4cd137;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    animation: slideIn 0.5s ease;
+}
+@media only screen and (max-width:600px) {
+    body{
+        max-height: 150%;
+    }
+    .container{
+        display: block;
+    }
+    .welcome,.form-side{
+        padding: 30px;
+    }
+    .welcome{
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="welcome">
+        <h1>Join Our Community</h1>
+        <p>Create a account to get started</p>
+    </div>
+    <div class="form-side">
+        <h1>Create Account</h1>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name"required>
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email"required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password"required>
+                <div class="error" id="passwordError"></div>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Enter your password"required>
+                <div class="error" id="confirmError"></div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the Teams & Conditions</label>
+            </div>
+            <button type="submit" class="submit-btn" href="homepage.html ">Sign Up</button>
+        </form>
+        <div class="success-message" id="successMessage">
+            Account created successfully!
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+
+</body>
+</html>
